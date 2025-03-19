@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>LU</fullName>
+        <default>false</default>
+        <label>LU</label>
+    </customValue>
+    <customValue>
+        <fullName>FI</fullName>
+        <default>false</default>
+        <label>FI</label>
+    </customValue>
+    <masterLabel>Jurisdiction</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

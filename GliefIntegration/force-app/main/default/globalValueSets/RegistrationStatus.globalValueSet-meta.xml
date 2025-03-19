@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ISSUED</fullName>
+        <default>false</default>
+        <label>ISSUED</label>
+    </customValue>
+    <customValue>
+        <fullName>LAPSED</fullName>
+        <default>false</default>
+        <label>LAPSED</label>
+    </customValue>
+    <customValue>
+        <fullName>RETIRED</fullName>
+        <default>false</default>
+        <label>RETIRED</label>
+    </customValue>
+    <customValue>
+        <fullName>MERGED</fullName>
+        <default>false</default>
+        <label>MERGED</label>
+    </customValue>
+    <customValue>
+        <fullName>DUPLICATE</fullName>
+        <default>false</default>
+        <label>DUPLICATE</label>
+    </customValue>
+    <customValue>
+        <fullName>ANNULLED</fullName>
+        <default>false</default>
+        <label>ANNULLED</label>
+    </customValue>
+    <customValue>
+        <fullName>PENDING_ARCHIVAL</fullName>
+        <default>false</default>
+        <label>PENDING_ARCHIVAL</label>
+    </customValue>
+    <customValue>
+        <fullName>PENDING_TRANSFER</fullName>
+        <default>false</default>
+        <label>PENDING_TRANSFER</label>
+    </customValue>
+    <masterLabel>Registration Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
