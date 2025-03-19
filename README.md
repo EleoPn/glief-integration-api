@@ -32,17 +32,28 @@ End user guide [Legal Entity Fetcher - How it works.pdf](https://github.com/user
 - Authorized Dev Hub  
 - Connected Salesforce Org  
 
-### Retrieve Metadata  
-sfdx force:source:retrieve -m ApexClass,LightningComponentBundle,CustomObject,CustomLabels,ApexTrigger
+### Deploy to Salesforce
+- **Clone repo in vscode** : git clone https://github.com/EleoPn/glief-integration-api
+- cd glief-integration-api
+- cd GliefIntegration
 
-### Create and Assign Named Credentials
+- **Authenticate to org** : sfdx auth:web:login -a MyOrgAlias
+  
+- **Deploy to org** : sf project deploy start --source-dir force-app --target-org MyOrgAlias
+
+- **Run tests**
+- **apex** : sf apex run test --result-format human --target-org leboncoin-dev-ed.develop 
+- **lwc** : npm run test:unit legalEntityFetcher.test.js
+
+
+### To test in org, create and Assign Named Credentials
 - Authorize endpoint: https://api.gleif.org/api/v1
 - Create an External Credential (GLEIF_API) and a Named Credential (GLEIF_API) for URL https://api.gleif.org/api/v1, with credential principal.
 - Create a Permission Set for Callout in the org, assign credential principal to the Permission Set, and assign the Permission Set to the user.
 - Verify access and permissions for test users (classes, fields, objects).
+- LWC: add custom lwc component to a record page (Account for example), activate and save.
 
-### Deploy to Salesforce
-sfdx force:source:deploy -p force-app
+
 
 ### Git Branching Strategy
 - Feature 1 (feature/legal-entity-apex-api) → Develop and submit a pull request.
