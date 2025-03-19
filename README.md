@@ -33,7 +33,7 @@ End user guide [Legal Entity Fetcher - How it works.pdf](https://github.com/user
 - Connected Salesforce Org  
 
 ### Deploy to Salesforce
-- **Clone repo in vscode** : git clone https://github.com/EleoPn/glief-integration-api
+- **Clone repo in vscode (if public access)** : git clone https://github.com/EleoPn/glief-integration-api
 - cd glief-integration-api
 - cd GliefIntegration
 
