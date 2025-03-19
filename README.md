@@ -28,7 +28,7 @@ End user guide [Legal Entity Fetcher - How it works.pdf](https://github.com/user
 ## Deployment Guide  
 
 ### Prerequisites  
-- Salesforce CLI (`sfdx`)  
+- Salesforce CLI  
 - Authorized Dev Hub  
 - Connected Salesforce Org  
 
