@@ -47,4 +47,4 @@ sfdx force:source:deploy -p force-app
 ### Git Branching Strategy
 - Feature 1 (feature/legal-entity-apex-api) → Develop and submit a pull request.
 - Feature 2 (feature/legal-entity-lwc-ui) → Branch from feature/legal-entity-apex-api, develop, and submit a pull request.
-- Merge into main after both features are complete.
+- Merge into main main after both features are complete. (or deploy to intermediate develop branch for testing)
