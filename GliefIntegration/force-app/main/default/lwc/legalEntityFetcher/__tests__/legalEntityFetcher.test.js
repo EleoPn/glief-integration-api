@@ -40,7 +40,7 @@ describe('c-legal-entity-fetcher', () => {
         // Verify that the error message is displayed
         const errorMessage = element.shadowRoot.querySelector('.slds-text-color_error');
         expect(errorMessage).not.toBeNull();
-        expect(errorMessage.textContent).toBe('LEI must be exactly 20 characters.');
+        expect(errorMessage.textContent).toBe('c.TXT_ERR_LEI_TOO_LONG');
     });
 
     it('displays the legal entity details after a successful search', async () => {
