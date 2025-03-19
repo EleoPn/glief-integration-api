@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>TXT_BTN_SEARCH</fullName>
+        <categories>TX_UI</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TXT_BTN_SEARCH</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>TXT_ERR_LEI_EMPTY</fullName>
+        <categories>TX_UI</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TXT_ERR_LEI_EMPTY</shortDescription>
+        <value>Please submit a LEI.</value>
+    </labels>
+    <labels>
+        <fullName>TXT_ERR_LEI_TOO_LONG</fullName>
+        <categories>TX_UI</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TXT_ERR_LEI_TOO_LONG</shortDescription>
+        <value>LEI must be exactly 20 characters.</value>
+    </labels>
+    <labels>
+        <fullName>TXT_ERR_RETRIEVE_DATA</fullName>
+        <categories>TX_UI</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TXT_ERR_RETRIEVE_DATA</shortDescription>
+        <value>Error retrieving data. Please check your input or contact your administrator.</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,95 @@
+<!--
+  @description       : 
+  @author            : Eleonore Pean
+  @group             : 
+  @last modified on  : 03-19-2025
+  @last modified by  : Eleonore Pean
+-->
+<template>
+    <div class="slds-grid slds-wrap slds-gutters">
+        <div class="slds-col slds-size_1-of-1 slds-p-around_medium">
+            <lightning-card title="Legal Entity Search" icon-name="custom:custom63">
+                <div class="slds-p-horizontal_medium">
+                    
+                    <!-- Input Field & Search Button in the Same Row -->
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-size_3-of-4">
+                            <lightning-input 
+                                label="Enter LEI (20 characters)"
+                                value={lei}
+                                onchange={handleInputChange}
+                                max-length="20">
+                            </lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-4 slds-align-bottom">
+                            <lightning-button 
+                                label={label.search} 
+                                variant="brand" 
+                                onclick={handleSearch} 
+                                disabled={isSearching}>
+                            </lightning-button>
+                        </div>
+                    </div>
+
+                    <!-- Loading Spinner -->
+                    <template if:true={isSearching}>
+                        <div class="slds-m-top_medium">
+                            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+                        </div>
+                    </template>
+                    
+                    <!-- Error Message -->
+                    <template if:true={error}>
+                        <p class="slds-text-color_error slds-m-top_medium">{error}</p>
+                    </template>
+
+                    <template if:true={entity}>
+                        <article class="slds-m-top_medium">
+                            <div class="slds-grid slds-wrap">
+                                <div class="slds-col slds-size_1-of-2 slds-p-around_x-small">
+                                    <ul class="slds-list_vertical slds-wrap">
+                                        <li class="slds-item">
+                                            <strong>Name:</strong> {entity.LegalName__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Status:</strong> {entity.Status__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Category:</strong> {entity.Category__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Initial Registration Date:</strong> {entity.InitialRegistrationDate__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Last Update Date:</strong> {entity.LastUpdateDate__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Next Renewal Date:</strong> {entity.NextRenewalDate__c}
+                                        </li>
+                                    </ul>
+                                </div>
+                    
+                                <div class="slds-col slds-size_1-of-2 slds-p-around_x-small">
+                                    <ul class="slds-list_vertical slds-wrap">
+                                        <li class="slds-item">
+                                            <strong>LEI:</strong> {entity.LEI__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Registration Status:</strong> {entity.RegistrationStatus__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Jurisdiction:</strong> {entity.Jurisdiction__c}
+                                        </li>
+                                        <li class="slds-item">
+                                            <strong>Legal Address:</strong> {entity.LegalAddress__c}, {entity.LegalPostalCode__c} - {entity.LegalCity__c} ({entity.LegalCountry__c})
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                </div>
+            </lightning-card>
+        </div>
+    </div>
+</template>
